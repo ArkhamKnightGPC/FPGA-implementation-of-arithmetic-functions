@@ -1,6 +1,6 @@
 # FPGA-implementation-of-arithmetic-functions
 
-This is a study repository with VHDL solutions to the problems in [[1]](1).
+This is a study repository with VHDL solutions to the problems in [[1]](#1).
 
 Exercise solutions include testbenches made for verification. The tools [GHDL](http://ghdl.free.fr/) and [GTKWave](https://gtkwave.sourceforge.net/) were used for simulation.
 
