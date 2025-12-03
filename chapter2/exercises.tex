@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage[linesnumbered]{algorithm2e}
+
+\begin{document}
+
+\section*{Architecture of digital circuits}
+
+\begin{tcolorbox}
+\textbf{Example (square root function)}\\
+Implement a circuit for the following integer square root algorithm:
+\begin{algorithm}[H]
+    $r \leftarrow 0$\;
+    $s \leftarrow 1$\;
+    \While{$s \leq x$}{
+        $s \leftarrow s + 2*(r+1) + 1$\;
+        $r \leftarrow r + 1$\;
+    }
+    $sqrt \leftarrow r$
+\end{algorithm}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\textbf{Exercise 1}\\
+Let $S_n = \{x \in \mathbb{Z} : 0 \leq x < 2^n\}$ denote the set of all $n$-bit integers.
+A \textit{carry-save adder} implements the transformation
+\[
+\begin{cases}
+    (x_1, x_2, x_3) \in S_n^3 \to (y_1, y_2) \in S_n^2 \\
+    x_1 + x_2 + x_3 = y_1 + 2 \cdot y_2
+\end{cases}
+\]
+A \textit{7-to-3 counter} uses carry-save adder components to implement the transformation
+\[
+\begin{cases}
+    (x_1, x_2, x_3, x_4, x_5, x_6, x_7) \in S_n^7 \to (y_1, y_2, y_3) \in S_n^3 \\
+    x_1 + x_2 + x_3 + x_4 + x_5 + x_6 + x_7 = y_1 + 2 \cdot y_2 + 4 \cdot y_3
+\end{cases}
+\]
+These components are used in multiplication algorithms, where multiple-operand addition scenarios occur. Generate the following VHDL models of a 7-to-3 counter:
+\begin{itemize}
+    \item a combinational circuit, made up of four carry-save adders;
+    \item a data path including two carry-save adders and several registers where computation is performed over 3 cycles
+    \item a data path including one carry-save adders and several registers where computation is performed over 4 cycles
+\end{itemize}
+\end{tcolorbox}
+\end{document}
