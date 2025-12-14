@@ -12,7 +12,7 @@ architecture test of tb_sequential_counter7_3 is
     signal x1,x2,x3,x4,x5,x6,x7 : std_ulogic_vector(N-1 downto 0) := (others => '0');
     signal y1,y2,y3 : std_ulogic_vector(N-1 downto 0);
 begin
-    clk <= (not clk) after T;
+    clk <= (not clk) after T/2;
     dut: entity work.sequential_counter7_3
         generic map(
             N => N
@@ -44,7 +44,7 @@ begin
         x4 <= "0100";
         x5 <= "0101";
         x6 <= "0110";
-        x7 <= "0111";
+        x7 <= "0111"; -- 1+...+7 = 28
         start <= '1'; wait until done ='1';
 
         sum_x := to_integer(unsigned(x1)) + to_integer(unsigned(x2))
