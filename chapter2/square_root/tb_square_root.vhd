@@ -22,7 +22,7 @@ begin
             sqrt_x => sqrt_x
         );
 
-    clk <= not clk after T;
+    clk <= not clk after T/2;
     stimulus: process
     begin
         -- Test 1: x = 49
