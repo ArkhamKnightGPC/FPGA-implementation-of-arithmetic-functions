@@ -7,3 +7,4 @@
 # ghdl by-products
 *.cf
 *.vcd
+*.out

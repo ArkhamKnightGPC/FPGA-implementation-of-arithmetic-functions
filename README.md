@@ -1,8 +1,26 @@
-# FPGA-implementation-of-arithmetic-functions
+# FPGA implementation of arithmetic functions
 
-This is a study repository with VHDL solutions to the problems in [[1]](#1).
+This is a study repository with SystemVerilog implementations of useful arithmetic functions [[1]](#1). All models include testbenches for verification. There are two main goals for this study:
 
-Exercise solutions include testbenches made for verification. The tools [GHDL](http://ghdl.free.fr/) and [GTKWave](https://gtkwave.sourceforge.net/) were used for simulation.
+1. Translate algorithms into synthesizable circuits;
+2. and experiment with data path optimization techniques (pipelining, loop unrolling, etc.).
+
+## Table of contents
+- [Adders](#adders)
+- [Multipliers](#multipliers)
+- [Dividers](#dividers)
+- [Finite Field Arithmetic](#finite-field-arithmetic)
+
+---
+
+### Adders
+
+### Multipliers
+
+### Dividers
+
+### Finite-Field Arithmetic
+
 
 ## References
 
